@@ -10,7 +10,7 @@
 body{
     display: flex;
     align-items: center;
-    background-color: #5e956f;
+    background-color: #2f503a;
     height: 100vh;
     flex-direction: column;
 }
@@ -39,7 +39,6 @@ nav{
     flex-direction: column;
     margin: 5px;
     border-radius: 20px;
-
 }
 
 
@@ -59,10 +58,11 @@ nav{
     background-color: #77C18F;
 }
 
-nav h1{
+.container h1{
     font-family: Handjet;
-    font-size: 40px;
+    font-size: 70px;
     color: #2f503a;
-
+    margin-bottom: -20px;
+    margin-top: -15px;
    }
 
