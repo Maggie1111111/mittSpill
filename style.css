@@ -13,12 +13,14 @@ body{
     background-color: #2f503a;
     height: 100vh;
     flex-direction: column;
+    user-select: none;
 }
 
 img {
     width: 100%;
 }
 .container{
+
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -40,6 +42,12 @@ img {
     grid-template-rows: repeat(15, auto);
     box-shadow: 0px 10px 10px #2f503a;
 }
+.containerspillbrett{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
 .spillbrett div{
     background-color: #A0DAB4;
 }
@@ -55,3 +63,22 @@ img {
     margin-top: -25px;
 }
 
+.container button{
+    background-color: #a9e1bd;
+    color: #2f503a;
+    padding: 10px;
+    border-top: 4px solid #2f503a;
+    border-left: 4px solid #2f503a;
+    border-bottom: 4px solid #58916a;
+    border-right: 4px solid #58916a;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Handjet;
+    font-size: 30px;
+} 
+#start_score{
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   width: 100%; 
+}
