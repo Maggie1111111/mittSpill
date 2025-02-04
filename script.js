@@ -10,9 +10,10 @@ function slange(){
     slange.style.backgroundColor = "pink"
     
     slange.style.position = "absolute"
-    slange.style.width = "99.9px"
+    slange.style.width = "33.3px"
     slange.style.height = "33.3px"
     slange.style.left = "33.3px"
+    slange.style.border = "dotted 1px #2f503a"
     containerspillbrett.appendChild(slange)
 }
 function poeng(){
