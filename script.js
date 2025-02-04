@@ -1,11 +1,9 @@
 const container = document.querySelector(".spillbrett")
 const startknapp = document.querySelector(".container button")
 const containerspillbrett = document.querySelector(".containerspillbrett")
+const logo = document.getElementById("logo")
 
-for (x=0; x<225; x++){
-    const div = document.createElement("div")
-    container.appendChild(div)
-}
+
 
 function slange(){
     const slange = document.createElement("div")
@@ -28,6 +26,11 @@ function poeng(){
 }
 
 function start(){
+    logo.style.display = "none"
+    for (x=0; x<225; x++){
+        const div = document.createElement("div")
+        container.appendChild(div)
+    }
     slange()
     poeng()
 }

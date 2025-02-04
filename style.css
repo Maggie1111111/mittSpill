@@ -41,6 +41,7 @@ img {
     grid-template-columns: repeat(15, auto);
     grid-template-rows: repeat(15, auto);
     box-shadow: 0px 10px 10px #2f503a;
+    background-color: #A0DAB4;
 }
 .containerspillbrett{
     position: relative;
@@ -81,4 +82,7 @@ img {
    align-items: center;
    justify-content: space-evenly;
    width: 100%; 
+}
+#logo{
+position: absolute;
 }
