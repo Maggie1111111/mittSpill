@@ -7,14 +7,14 @@ let slangeArray = [{x : 10, y : 10}]
 
 function tegnSlange(){
     slangeArray.forEach((segment) => {
-        const slangeElement = document.createElement("div")
-        slangeElement.style.backgroundColor = "pink"
+        const slangeHode = document.createElement("div")
+        slangeHode.style.backgroundColor = "pink"
     
-        slangeElement.style.position = "absolute"
-        slangeElement.style.width = "33.3px"
-        slangeElement.style.height = "33.3px"
-        slangeElement.style.left = "33.3px"
-        containerspillbrett.appendChild(slangeElement)
+        slangeHode.style.position = "absolute"
+        slangeHode.style.width = "33.3px"
+        slangeHode.style.height = "33.3px"
+        slangeHode.style.left = "33.3px"
+        containerspillbrett.appendChild(slangeHode)
     });
 }
 
@@ -25,6 +25,7 @@ function poeng(){
     poeng.style.width = "33.3px"
     poeng.style.height = "33.3px"
     poeng.style.right = "33.3px"
+    poeng.style.pointerEvents = "none"
     containerspillbrett.appendChild(poeng)
 }
 
