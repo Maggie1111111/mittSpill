@@ -14,14 +14,13 @@ function tegnSlange(){
         slangeElement.style.width = "33.3px"
         slangeElement.style.height = "33.3px"
         slangeElement.style.left = "33.3px"
-        slangeElement.style.border = "dotted 1px #58916a"
         containerspillbrett.appendChild(slangeElement)
     });
 }
 
 function poeng(){
-    const poeng = document.createElement("div")
-    poeng.style.backgroundColor = "orange"
+    const poeng = document.createElement("img")
+    poeng.src = "bilder/pixel_appelsin.png"
     poeng.style.position = "absolute"
     poeng.style.width = "33.3px"
     poeng.style.height = "33.3px"
@@ -40,7 +39,8 @@ function start(){
         const div = document.createElement("div")
         brett.appendChild(div)
     }
-    slange()
+    tegnSlange()
     poeng()
+
 }
 startknapp.addEventListener("click", start)
