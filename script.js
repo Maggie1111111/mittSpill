@@ -3,7 +3,7 @@ const startknapp = document.querySelector(".container button")
 const containerspillbrett = document.querySelector(".containerspillbrett")
 const logo = document.getElementById("logo")
 
-let slangeArray = [{x : 10, y : 10}]
+let slangeArray = [{x : 7, y : 2}]
 
 function tegnSlange(){
     slangeArray.forEach((segment) => {
@@ -28,6 +28,11 @@ function poeng(){
     poeng.style.pointerEvents = "none"
     containerspillbrett.appendChild(poeng)
 }
+
+document.addEventListener("keydown", function(event){
+    const taster = {PilOpp:"up", PilNed:"down", PilVenstre:"left", PilHøyre:"right"}
+    if (taster[event.key])
+})
 
 function start(){
     logo.style.display = "none"
