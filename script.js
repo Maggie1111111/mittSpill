@@ -7,7 +7,8 @@ const cover = document.getElementById("cover")
 let poengSum = 0
 let retning = ""
 let spillInterval
-const poengSoundEffect = new Audio("mp3/coin-recieved-230517.mp3")
+const bakgrunnsmusikk = new Audio("mp3/8-bit-heaven-26287.mp3")
+const poengSoundEffect = new Audio("mp3/eating-sound-effect-36186.mp3")
 
 let poengPosisjon = {
         x: Math.floor(Math.random() * 15),
@@ -109,6 +110,10 @@ function start(){
 
     clearInterval(spillInterval)
     spillInterval = setInterval(flyttSlange, 200)
+
+    bakgrunnsmusikk.volume = 0.5
+    bakgrunnsmusikk.loop = true
+    bakgrunnsmusikk.play()
 
 }
 startknapp.addEventListener("click", start)
