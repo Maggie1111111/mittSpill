@@ -2,8 +2,13 @@ const brett = document.querySelector(".spillbrett")
 const startknapp = document.querySelector(".container button")
 const containerspillbrett = document.querySelector(".containerspillbrett")
 const logo = document.getElementById("logo")
-let retning = "right"
+const instruksjon1 = document.getElementById("instruksjon1")
+let retning = ""
 let spillInterval
+const poengPosisjon = {
+    x: Math.floor(Math.random() * 15),
+    y: Math.floor(Math.random() * 15)
+}
 
 
 
@@ -29,11 +34,13 @@ function tegnSlange(){
 
 function poeng(){
     const poeng = document.createElement("img")
+
     poeng.src = "bilder/pixel_appelsin.png"
     poeng.style.position = "absolute"
     poeng.style.width = "33.3px"
     poeng.style.height = "33.3px"
-    poeng.style.right = "33.3px"
+    poeng.style.right = `${poengPosisjon.x * 33.3}px`
+    poeng.style.top = `${poengPosisjon.x * 33.3}px`
     poeng.style.pointerEvents = "none"
     containerspillbrett.appendChild(poeng)
 }
@@ -45,9 +52,16 @@ function flyttSlange() {
     if (retning === "down") hode.y += 1
     if (retning === "left") hode.x -= 1
     if (retning === "right") hode.x += 1
+    
+    if (hode.x === poengPosisjon.x && hode.y === poengPosisjon.y) {
+        poengSum += 1
+
+    } else {
+        slangeArray.pop()
+    }
 
     slangeArray.unshift(hode)
-    slangeArray.pop()
+ 
 
     tegnSlange()
 }
@@ -55,6 +69,7 @@ document.addEventListener("keydown", function(event){
     const taster = {ArrowUp:"up", ArrowDown:"down", ArrowLeft:"left", ArrowRight:"right"}
     if (taster[event.key]){
         retning = taster[event.key]
+        instruksjon1.style.display = "none"
     }
     console.log(retning)
     
@@ -71,11 +86,10 @@ function start(){
         const div = document.createElement("div")
         brett.appendChild(div)
     }
+    instruksjon1.style.display = "flex"
+
     tegnSlange()
     poeng()
-    
-    slangeArray = [{ x: 7, y: 7 }]
-    retning = "right"
 
     clearInterval(spillInterval)
     spillInterval = setInterval(flyttSlange, 200)
