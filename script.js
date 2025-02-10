@@ -3,6 +3,7 @@ const startknapp = document.querySelector(".container button")
 const containerspillbrett = document.querySelector(".containerspillbrett")
 const logo = document.getElementById("logo")
 const instruksjon1 = document.getElementById("instruksjon1")
+const cover = document.getElementById("cover")
 let retning = ""
 let spillInterval
 const poengPosisjon = {
@@ -70,6 +71,7 @@ document.addEventListener("keydown", function(event){
     if (taster[event.key]){
         retning = taster[event.key]
         instruksjon1.style.display = "none"
+        cover.style.display = "none"
     }
     console.log(retning)
     
@@ -87,7 +89,7 @@ function start(){
         brett.appendChild(div)
     }
     instruksjon1.style.display = "flex"
-
+    cover.style.display = "flex"
     tegnSlange()
     poeng()
 

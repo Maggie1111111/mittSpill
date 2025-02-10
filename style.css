@@ -90,11 +90,30 @@ width: 600px;
 #instruksjon1{
     display: none;
     position: absolute;
-    background-color: white;
-    opacity: 0.7;
+    background-color: #527a5f;
     width: 300px;
     flex-direction: column;
     font-family: Handjet;
-    
-
+    border-radius: 20px;
+    padding: 40px;
+    z-index: 100;
+}
+#instruksjon1 div{
+    background-color: #81ac8f;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    color: #2f503a;
+    z-index: 101;
+}
+#cover{
+    height: 100vh;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 99;
+    width: 100%;
+    position: absolute;
+    display: none;
 }
