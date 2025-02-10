@@ -2,6 +2,9 @@ const brett = document.querySelector(".spillbrett")
 const startknapp = document.querySelector(".container button")
 const containerspillbrett = document.querySelector(".containerspillbrett")
 const logo = document.getElementById("logo")
+let retning = ""
+
+
 
 let slangeArray = [{x : 7, y : 2}]
 
@@ -15,7 +18,7 @@ function tegnSlange(){
         slangeHode.style.height = "33.3px"
         slangeHode.style.left = "33.3px"
         containerspillbrett.appendChild(slangeHode)
-    });
+    })
 }
 
 function poeng(){
@@ -29,9 +32,13 @@ function poeng(){
     containerspillbrett.appendChild(poeng)
 }
 
+
 document.addEventListener("keydown", function(event){
     const taster = {PilOpp:"up", PilNed:"down", PilVenstre:"left", PilHøyre:"right"}
-    if (taster[event.key])
+    if (taster[event.key]){
+        retning = taster[event.key]
+    }
+    
 })
 
 function start(){
